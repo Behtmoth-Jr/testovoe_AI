@@ -66,6 +66,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./dist/fonts/'));
 })
 
+gulp.task('script', function () {
+    return gulp.src('./src/script/**/*', {encoding: false})
+    .pipe(gulp.dest('./dist/script/'));
+})
+
 
 const serverOptions = {
     livereload: true,
@@ -81,11 +86,12 @@ gulp.task('watch', function() {
     gulp.watch ('./src/scss/**/**.scss', gulp.parallel('scss'));
     gulp.watch ('./src/**/*.html', gulp.parallel('html'));
     gulp.watch ('./src/img/**/*', gulp.parallel('img'));
+    gulp.watch ('./src/script/**/*', gulp.parallel('script'));
     gulp.watch ('./src/fonts/**/*', gulp.parallel('fonts'));
 })
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('html', 'scss', 'img', 'fonts'),
+    gulp.parallel('html', 'scss', 'img', 'fonts', 'script'),
     gulp.parallel('server', 'watch')
 ));

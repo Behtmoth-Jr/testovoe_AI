@@ -1,19 +1,27 @@
 .introduction {
-    display: flex;
+    width: 100%;
+    padding: 0 15px;
+
+    &__container {
+        margin: auto;
+    }
+}
+
+.introduction-container {
     max-width: 1400px;
-    margin: auto;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 84px 0;
 
     @media (max-width: 1023px) {
         flex-direction: column-reverse;
-        padding: 18px 15px;
+        padding: 18px 0;
+        width: 100%;
     }
-
 }
 
-.introduction--text {
+.introduction-text {
 
     &__title {
         font-size: $heading;
@@ -56,7 +64,7 @@
     }
 }
 
-.introduction--img {
+.introduction-img {
     position: relative;
     right: -78px;
     top: 14px;
@@ -87,4 +95,63 @@
         background-color: hsla(0, 0%, 100%, 1);
         box-shadow: 0px 0px 30px 2px $pink__light;
     }
+}
+
+
+.advantages {
+    width: 100%;
+    padding: 0 15px;
+
+    &__container {
+        margin: auto;
+    }
+}
+
+.advantages-container {
+    max-width: 926px;
+    padding: 9px 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1023px) {
+        padding: 60px 0;
+    }
+}
+
+.advantages-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: $heading;
+        line-height: 83px;
+        font-family: "involve";
+        color: hsla(0, 0%, 100%, 1);
+        margin-bottom: 24px;
+        letter-spacing: 2px;
+        text-align: center;
+
+        @media (max-width: 1023px) {
+            font-size: $heading__mobile;
+            line-height: 39px;
+        }
+    }
+
+    &__info {
+        font-size: $body_large;
+        line-height: 26px;
+        text-align: center;
+        width: 679px;
+
+        @media (max-width: 1023px) {
+            width: 100%;
+            font-size: $body_large__mobile;
+            line-height: 19px;
+        }
+    }
+}
+
+.light {
+    color: $pink__light;
 }

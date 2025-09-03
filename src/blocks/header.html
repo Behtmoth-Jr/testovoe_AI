@@ -1,32 +1,20 @@
-<header class="header">
-    <a href="#" class="header--title header__title">
-        <img src="img/logo.png" alt="" class="header--title__img">
-        AI
-    </a>
-    <div class="header--burger" id="burger">
-        <img src="img/burger_open.svg" alt="menu" class="header--burge__ico">
-    </div>
-    <nav class="header--nav" id="nav">
-        <div class="header--nav--link">
-            <a href="#" class="header--nav--link__txt">Главная</a>
-            <a href="#" class="header--nav--link__txt">Преимущества</a>
+<header class="header" id="header">
+    <div class="header-container header__container">
+        <div class="header-title">
+            <a href="#" class="header-title__link">
+                <img src="img/logo.png" alt="" class="header-title__img">
+                AI
+            </a>
+            <button class="header-burger" id="burger">
+                <span class="header-burger__midle"></span>
+            </button>
         </div>
-        <button class="header--nav__button">Получить доступ</button>
-    </nav>
+        <nav class="header-nav" id="nav">
+            <div class="header-nav-link">
+                <a href="#" class="header-nav-link__txt">Главная</a>
+                <a href="#" class="header-nav-link__txt">Преимущества</a>
+            </div>
+            <button class="header-nav__button">Получить доступ</button>
+        </nav>
+    </div>
 </header>
-
-<script>
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav');
-const burgerIcon = burger.querySelector('.header--burge__ico');
-
-burger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-
-  if (nav.classList.contains('active')) {
-    burgerIcon.src = 'img/burger_close.svg'; // крестик
-  } else {
-    burgerIcon.src = 'img/burger_open.svg'; // три полоски
-  }
-});
-</script>
