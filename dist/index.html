@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testovoe_AI</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header class="header">
+    <a href="#" class="header--title header__title">
+        <img src="img/logo.png" alt="" class="header--title__img">
+        AI
+    </a>
+    <div class="header--burger" id="burger">
+        <img src="img/burger_open.svg" alt="menu" class="header--burge__ico">
+    </div>
+    <nav class="header--nav" id="nav">
+        <div class="header--nav--link">
+            <a href="#" class="header--nav--link__txt">Главная</a>
+            <a href="#" class="header--nav--link__txt">Преимущества</a>
+        </div>
+        <button class="header--nav__button">Получить доступ</button>
+    </nav>
+</header>
+
+<script>
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+const burgerIcon = burger.querySelector('.header--burge__ico');
+
+burger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+
+  if (nav.classList.contains('active')) {
+    burgerIcon.src = 'img/burger_close.svg'; // крестик
+  } else {
+    burgerIcon.src = 'img/burger_open.svg'; // три полоски
+  }
+});
+</script>
+
+    <main>
+    <section class="introduction">
+        <div class="introduction--text">
+            <h1 class="introduction--text__title">
+                <span class="accent">Нейросеть</span>
+                может все!
+            </h1>
+            <p class="introduction--text__txt">
+                Мы уже живем в этой удивительной реальности
+            </p>
+            <button class="button">Погрузиться в новый мир</button>
+        </div>
+        <img src="img/pc.png" alt="" class="introduction--img">
+    </section>
+</main>
+</body>
+</html>

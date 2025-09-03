@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+
+    &__title {
+        font-family: "involve";
+        font-size: $subheading;
+        line-height: 46px;
+
+         &:hover {
+            color: $pink__light;
+        }
+    }
+}
+
+.header--title {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        margin-right: 18px;
+    }
+}
+
+.header--burger {
+    display: none;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
+}
+
+.header--nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 716px;
+
+    @media (max-width: 1023px) {
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__button {
+        font-size: 17px;
+        line-height: 19px;
+        padding: 16px 22px;
+        border: 1px solid hsla(0, 0%, 100%, 1);
+        border-radius: 18px;
+
+        &:hover {
+            background-color: $pink__light;
+            border: 1px solid $pink__light;
+        }
+    }
+}
+
+.header--nav--link {
+    display: flex;
+    justify-content: space-between;
+    width: 382px;
+
+    &__txt {
+        color: $grey;
+        font-size: $body_large;
+        line-height: 26px;
+
+        &:hover {
+            color: $pink__light;
+        }
+    }
+}

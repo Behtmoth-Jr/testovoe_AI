@@ -1,0 +1,90 @@
+.introduction {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 84px 0;
+
+    @media (max-width: 1023px) {
+        flex-direction: column-reverse;
+        padding: 18px 15px;
+    }
+
+}
+
+.introduction--text {
+
+    &__title {
+        font-size: $heading;
+        line-height: 94px;
+        font-family: "involve";
+        color: hsla(0, 0%, 100%, 1);
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+
+        @media (max-width: 1023px) {
+            font-size: $heading__mobile;
+            line-height: 39px;
+        }
+    }
+
+    &__txt {
+        font-size: $body_large;
+        line-height: 26px;
+        margin-bottom: 72px;
+
+        @media (max-width: 1023px) {
+            font-size: $body_large__mobile;
+            line-height: 19px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.accent {
+    font-size: $accent;
+    line-height: 122px;
+    background-image: linear-gradient(90deg, $pink__light 0%, $cyan 44%, $cyan__light 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+
+    @media (max-width: 1023px) {
+        font-size: $accent__mobile;
+        line-height: 55px;
+    }
+}
+
+.introduction--img {
+    position: relative;
+    right: -78px;
+    top: 14px;
+
+    @media (max-width: 1023px) {
+        max-width: 300px;
+        right: -30px;
+        top: auto;
+    }
+
+}
+
+.button {
+    background-color: $pink;
+    font-size: $body_large;
+    line-height: 26px;
+    padding: 18px 24px;
+    border-radius: 18px;
+
+    @media (max-width: 1023px) {
+        font-size: $body_large__mobile;
+        line-height: 19px;
+        width: 100%;
+    }
+
+    &:hover {
+        color: hsla(227, 20%, 6%, 1);
+        background-color: hsla(0, 0%, 100%, 1);
+        box-shadow: 0px 0px 30px 2px $pink__light;
+    }
+}
