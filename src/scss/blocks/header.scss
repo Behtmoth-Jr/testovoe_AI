@@ -163,6 +163,18 @@
             background-color: $pink__light;
             border: 1px solid $pink__light;
         }
+
+        &:active {
+            background-color: $pink;
+            color: hsla(227, 20%, 6%, 1);
+            border: 1px solid  $pink;
+        }
+
+        &:disabled {
+            background-color: $pink__dark;
+            color: hsl(323, 95%, 9%);
+            border: 1px solid  $pink__dark;
+        }
     }
 }
 
@@ -188,6 +200,10 @@
 
         &:hover {
             color: $pink__light;
+        }
+
+        &:active {
+            color: $pink;
         }
     }
 }

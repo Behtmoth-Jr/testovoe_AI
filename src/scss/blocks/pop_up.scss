@@ -33,6 +33,7 @@
         background-color: hsla(0, 0%, 100%, 1);
         border-radius: 3px;
         transform: rotate(45deg);
+        transition: all 0.3s ease;
 
     &::after {
         content: '';
@@ -43,6 +44,7 @@
         background-color: hsla(0, 0%, 100%, 1);
         border-radius: 3px;
         transform: rotate(-90deg);
+        transition: all 0.3s ease;
         }
     }
 
@@ -88,8 +90,20 @@
     height: 24px;
     top: 3%;
     left: 92%;
+    color: $pink;
 
     @media (max-width: 1023px) {
         position: sticky;
+    }
+
+    &:hover {
+
+        .popup__close {
+            background-color: $pink;
+
+            &::after {
+                background-color: $pink;
+            }
+        }
     }
 }

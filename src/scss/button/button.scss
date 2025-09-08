@@ -17,8 +17,22 @@
         box-shadow: 0px 0px 30px 2px $pink__light;
     }
 
+    &:active {
+        color: hsla(227, 20%, 6%, 1);
+        background-color: hsla(0, 0%, 100%, 1);
+    }
+
+    &:disabled {
+        background-color: hsl(0, 0%, 30%);
+        color: hsl(0, 0%, 22%);
+    }
+
     &--large {
         width: 100%;
+    }
+
+    &--white {
+        color: hsla(0, 0%, 100%, 1);
     }
 }
 
@@ -31,11 +45,27 @@
     border: none;
     text-align: center;
     color: hsla(0, 0%, 100%, 1);
+    border: 1px solid hsla(243, 26%, 14%, 1);
 
     @media (max-width: 1023px) {
         font-size: $body_large__mobile;
         line-height: 19px;
         width: 100%;
+    }
+
+    &:focus {
+        border: 1px solid $cyan__light;
+        caret-color: $cyan__light;
+    }
+
+    &.error {
+        border: 1px solid $pink__light;
+        caret-color: $pink__light;
+        color: $pink__light;
+
+        &::placeholder {
+            color: $pink__light;
+        }
     }
 
     &--large {
