@@ -84,6 +84,10 @@
     overflow: hidden;
     padding-bottom: 84px;
 
+    @media (max-width: 1023px) {
+        padding-bottom: 36px;
+    }
+
     &__container {
         margin: auto;
         margin-bottom: 77px;
@@ -173,6 +177,10 @@
     flex-wrap: wrap;
     justify-content: center;  
     gap: 30px;
+
+    @media (max-width: 1023px) {
+        gap: 15px;
+    }
 }
 
 .card {
