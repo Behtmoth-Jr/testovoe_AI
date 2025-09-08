@@ -77,32 +77,19 @@
 
 }
 
-.button {
-    background-color: $pink;
-    font-size: $body_large;
-    line-height: 26px;
-    padding: 18px 24px;
-    border-radius: 18px;
-
-    @media (max-width: 1023px) {
-        font-size: $body_large__mobile;
-        line-height: 19px;
-        width: 100%;
-    }
-
-    &:hover {
-        color: hsla(227, 20%, 6%, 1);
-        background-color: hsla(0, 0%, 100%, 1);
-        box-shadow: 0px 0px 30px 2px $pink__light;
-    }
-}
-
-
 .advantages {
     width: 100%;
     padding: 0 15px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 84px;
 
     &__container {
+        margin: auto;
+        margin-bottom: 77px;
+    }
+
+    &__cards  {
         margin: auto;
     }
 }
@@ -131,6 +118,7 @@
         margin-bottom: 24px;
         letter-spacing: 2px;
         text-align: center;
+        font-weight: 500;
 
         @media (max-width: 1023px) {
             font-size: $heading__mobile;
@@ -148,6 +136,76 @@
             width: 100%;
             font-size: $body_large__mobile;
             line-height: 19px;
+        }
+    }
+}
+
+.advantages__background {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 213px;
+    line-height: $large;
+    letter-spacing: 2px;
+    z-index: -10;
+    color: transparent;
+    -webkit-text-stroke: 1px hsl(230, 8%, 15%);
+    white-space: nowrap;
+    user-select: none;
+}
+
+.advantages-cards {
+    max-width: 930px;
+    padding: 9px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    gap: 30px;
+}
+
+.card {
+    background: $grey__black;
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    max-width: 450px;
+    min-height: 332px;
+    padding: 30px;
+    border-radius: 18px;
+
+    @media (max-width: 1023px) {
+        min-height: 214px;
+        padding: 21px;
+        flex: 51%;
+    }
+
+    &__title {
+        font-family: 'evolventa';
+        color: hsla(0, 0%, 100%, 1);
+        font-size: $body_large;
+        line-height: 28px;
+        margin-top: 24px;
+        margin-bottom: 22px;
+        font-weight: 400;
+
+        @media (max-width: 1023px) {
+            font-size: $body_large__mobile;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__icon {
+        width: 48px;
+    }
+
+    &__description {
+        font-size: $body;
+        line-height: 18px;
+
+        @media (max-width: 1023px) {
+            font-size: $body__mobile;
         }
     }
 }

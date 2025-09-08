@@ -38,7 +38,7 @@
                 <p class="introduction-text__txt">
                     Мы уже живем в этой удивительной реальности
                 </p>
-                <button class="button">Погрузиться в новый мир</button>
+                <button class="button" id="popup">Погрузиться в новый мир</button>
             </div>
             <img src="img/pc.png" alt="" class="introduction-img">
         </div>
@@ -53,8 +53,52 @@
                 </p>
             </div>
         </div>
+        <p class="advantages__background">ПРЕИМУЩЕСТВА</p>
+        <div class="advantages-cards advantages__cards">
+            
+                <div class="card">
+                    <img src="img/business.svg" alt="" class="card__icon">
+                    <h3 class="card__title">Хотите открыть бизнес?</h3>
+                    <p class="card__description">Нейросеть поможет составить бизнес-план, рассчитать расходы, нарисовать логотип, найти место получше и станет вашим главным деловым партнером</p>
+                </div>
+            
+                <div class="card">
+                    <img src="img/vacation.svg" alt="" class="card__icon">
+                    <h3 class="card__title">Мечтаете об отпуске?</h3>
+                    <p class="card__description">Нейросеть поможет найти место по вашим запросам, выбрать наилучший сезон, собрать чемодан, подыскать где остановиться и сделать ваш отпуск незабываемым</p>
+                </div>
+            
+                <div class="card">
+                    <img src="img/students.svg" alt="" class="card__icon">
+                    <h3 class="card__title">Вы студент и нуждаетесь в помощи в учебе?</h3>
+                    <p class="card__description">Нет проблем! Нейросеть — ваш лучший друг, который поможет написать курсовую, решить сложный тест и подготовиться к экзаменам</p>
+                </div>
+            
+                <div class="card">
+                    <img src="img/health.svg" alt="" class="card__icon">
+                    <h3 class="card__title">Интересует здоровый образ жизни?</h3>
+                    <p class="card__description">Нейросеть поделится советами по сбалансированному питанию, безопасным тренировкам и поддержке мотивации.</p>
+                </div>
+            
+        </div>
     </section>
 </main>
+    <div class="overlay" id="overlay">
+    <div class="popup">
+        <button class="popup-button" id="closeBtn">
+            <span class="popup__close"></span>
+        </button>
+        <h2 class="popup__title">
+            Овладей нейросетями!
+        </h2>
+        <p class="popup__txt">
+            Получи в подарок доступ ко всем курсам
+        </p>
+        <img src="img/gift.png" alt="" class="popup__img">
+        <input type="email" name="email" id="" placeholder="Введите e-mail" class="email popup__email email--large">
+        <button class="button button--large">Получить доступ</button>
+    </div>
+</div>
 </body>
 <script src="./script/script.js"></script>
 </html>

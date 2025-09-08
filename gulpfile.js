@@ -7,7 +7,8 @@ const fs = require ('fs');
 const sourceMaps = require ('gulp-sourcemaps');
 const plumber = require ('gulp-plumber');
 const notify = require ('gulp-notify');
-const { error } = require('console');
+const error  = require('console');
+const data = require('gulp-data');
 
 gulp.task ('clean', function (done) {
     if (fs.existsSync('./dist/')) {
@@ -30,13 +31,34 @@ const plumberHtmlConfig = {
     })
 }
 
-gulp.task('html', function () {
+function getCardsData() {
+    try {
+        const data = fs.readFileSync('./src/data/cards.json', 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error('Error reading cards.json:', error);
+        return { cards: [] };
+    }
+}
+
+gulp.task('html', function() {
+    const cardsData = getCardsData(); // ← Получаем данные карточек
+    
     return gulp
         .src('./src/*.html')
         .pipe(plumber(plumberHtmlConfig))
-        .pipe(fileInclude(fileIncludeSettings))
-        .pipe(gulp.dest("./dist/"))
-})
+        .pipe(data(function() {
+            return { cards: cardsData.cards }; // ← Передаем данные в gulp-data
+        }))
+        .pipe(fileInclude({
+            prefix: '@@',
+            basepath: '@file',
+            context: {
+                cards: cardsData.cards // ← Передаем данные в fileInclude
+            }
+        }))
+        .pipe(gulp.dest("./dist/"));
+});
 
 const plumberScssConfig = {
     errorHandler: notify.onError ({
@@ -71,6 +93,10 @@ gulp.task('script', function () {
     .pipe(gulp.dest('./dist/script/'));
 })
 
+gulp.task('data', function() {
+    return gulp.src('./src/data/**/*', { encoding: false })
+        .pipe(gulp.dest('./dist/data/'));
+});
 
 const serverOptions = {
     livereload: true,
@@ -88,10 +114,11 @@ gulp.task('watch', function() {
     gulp.watch ('./src/img/**/*', gulp.parallel('img'));
     gulp.watch ('./src/script/**/*', gulp.parallel('script'));
     gulp.watch ('./src/fonts/**/*', gulp.parallel('fonts'));
+    gulp.watch('./src/data/**/*', gulp.parallel('html', 'data'));
 })
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('html', 'scss', 'img', 'fonts', 'script'),
+    gulp.parallel('html', 'scss', 'img', 'fonts', 'script', 'data'),
     gulp.parallel('server', 'watch')
 ));

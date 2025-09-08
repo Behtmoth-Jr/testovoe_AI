@@ -7,7 +7,7 @@
         z-index: 10;
 
         &.active {
-            background-color: $black_light;
+            background-color: $black__light;
 
             &::before {
                 content: "";
@@ -137,7 +137,7 @@
         width: 100%;
         position: absolute;
         top: 100%;
-        background-color: $black_light;
+        background-color: $black__light;
         padding: 30px 15px;
         opacity: 0;
         visibility: hidden;

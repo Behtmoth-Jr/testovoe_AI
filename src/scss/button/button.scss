@@ -1,0 +1,44 @@
+.button {
+    background-color: $pink;
+    font-size: $body_large;
+    line-height: 26px;
+    padding: 18px 24px;
+    border-radius: 18px;
+
+    @media (max-width: 1023px) {
+        font-size: $body_large__mobile;
+        line-height: 19px;
+        width: 100%;
+    }
+
+    &:hover {
+        color: hsla(227, 20%, 6%, 1);
+        background-color: hsla(0, 0%, 100%, 1);
+        box-shadow: 0px 0px 30px 2px $pink__light;
+    }
+
+    &--large {
+        width: 100%;
+    }
+}
+
+.email {
+    background-color: hsla(243, 26%, 14%, 1);
+    font-size: $body_large;
+    line-height: 26px;
+    padding: 18px 24px;
+    border-radius: 18px;
+    border: none;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 1);
+
+    @media (max-width: 1023px) {
+        font-size: $body_large__mobile;
+        line-height: 19px;
+        width: 100%;
+    }
+
+    &--large {
+        width: 100%;
+    }
+}
