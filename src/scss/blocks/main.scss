@@ -31,14 +31,14 @@
         letter-spacing: 2px;
         margin-bottom: 25px;
 
+        @media (max-width: 1439px) {
+            font-size: $heading__notebook;
+            line-height: 58px;
+        }
+
         @media (max-width: 1023px) {
             font-size: $heading__mobile;
             line-height: 39px;
-        }
-
-        @media (min-width: 1024px) and (max-width: 1439px) {
-            font-size: $heading__notebook;
-            line-height: 58px;
         }
     }
 
@@ -47,14 +47,14 @@
         line-height: 26px;
         margin-bottom: 72px;
 
+        @media (max-width: 1439px) {
+            margin-bottom: 40px;
+        }
+
         @media (max-width: 1023px) {
             font-size: $body_large__mobile;
             line-height: 19px;
             margin-bottom: 30px;
-        }
-
-        @media (min-width: 1024px) and (max-width: 1439px) {
-            margin-bottom: 40px;
         }
     }
 }
@@ -69,14 +69,14 @@
     display: inline-block;
     width: 100%;
 
+    @media (max-width: 1439px) {
+        font-size: $accent__notebook;
+        line-height: 83px;
+    }
+
     @media (max-width: 1023px) {
         font-size: $accent__mobile;
         line-height: 55px;
-    }
-
-    @media (min-width: 1024px) and (max-width: 1439px) {
-        font-size: $accent__notebook;
-        line-height: 83px;
     }
 }
 
@@ -164,15 +164,16 @@
         text-align: center;
         font-weight: 500;
 
+        @media (max-width: 1439px) {
+            font-size: $heading__notebook;
+            line-height: 58px;
+        }
+
         @media (max-width: 1023px) {
             font-size: $heading__mobile;
             line-height: 39px;
         }
 
-        @media (min-width: 1024px) and (max-width: 1439px) {
-            font-size: $heading__notebook;
-            line-height: 58px;
-        }
     }
 
     &__info {
