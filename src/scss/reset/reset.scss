@@ -15,7 +15,6 @@ a {
 }
 
 button {
-    font-family: "evolventa";
     background: none;
     border: none;
     cursor: pointer;
@@ -25,7 +24,7 @@ a, button {
     transition: 0.3s ease-out;
 }
 
-a, p, .email {
+a, p, button, .email {
     font-family: "evolventa";
     color: hsla(0, 0%, 100%, 1);
 }
