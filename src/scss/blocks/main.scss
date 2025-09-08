@@ -87,6 +87,10 @@
     &__container {
         margin: auto;
         margin-bottom: 77px;
+
+        @media (max-width: 1023px) {
+            margin-bottom: 0;
+        }
     }
 
     &__cards  {
@@ -101,7 +105,7 @@
     flex-direction: column;
 
     @media (max-width: 1023px) {
-        padding: 60px 0;
+        padding: 24px 0;
     }
 }
 
@@ -145,14 +149,21 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 213px;
-    line-height: $large;
+    font-size: $large;
+    line-height: 221px;
     letter-spacing: 2px;
     z-index: -10;
     color: transparent;
     -webkit-text-stroke: 1px hsl(230, 8%, 15%);
     white-space: nowrap;
     user-select: none;
+
+    @media (max-width: 1023px) {
+        font-size: $large__mobile;
+        line-height: 51px;
+        top: 2%;
+        letter-spacing: normal;
+    }
 }
 
 .advantages-cards {
